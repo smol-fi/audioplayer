@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/bootstrap-glyphicons.css">
+	<script defer src="script/script.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>JS music player</title>
+</head>
+<body>
+	<div id="content">
+	<table class="center">
+		<tr>
+		<td>
+		<div id="player">
+			<audio id="musicPlayer" src="./audio/song1.mp3"></audio>
+			<div id="display"></div>
+			<div id="songtitle">
+				<h3 id="songname">Pää Kii - Nyt skipataan kahvit</h3>
+			</div>
+			<div id="seekbar"><p id="time">00:00/00:00</p>
+				<button id="prevbutton" onclick="prevSong()" class="controls"><span class="glyphicon glyphicon-fast-backward"></span></button>
+				<input type="range" step="any" id="seek">
+				<button id="nextbutton" onclick="nextSong()" class="controls"><span class="glyphicon glyphicon-fast-forward"></span></button></div>
+			<div id="controls">
+					<button id="playButton" onclick="playMusic()" class="controls"><span class="glyphicon glyphicon-play"></span></button>
+					<button id="pausebutton" onclick="pauseMusic()" class="controls"><span class="glyphicon glyphicon-pause"></span></button>
+					<button id="stopButton" onclick="stopMusic()" class="controls"><span class="glyphicon glyphicon-stop"></span></button>
+			</div>
+			<div id="volumeslider"><p id="volume">Volume: 100%</p>
+					<button id="mutebutton" onclick="muteVolume()" class="controls"><span id="volbutton" class="glyphicon glyphicon-volume-up"></span></button>
+				<input type="range" id="volumeBar" value="1.0" step="0.01" min="0" max="1" oninput="changeVolume(this.value)" onchange="changeVolume(this.value)">
+			</div>
+		</div>
+	</td>
+	<td>
+		<div id="playlist">
+			<div id="img-1" class="list-img"><button class="song-select" onclick="playlistSelect(this.value)" value="1"></button></div>
+			<br>
+			<div id="img-2" class="list-img"><button class="song-select" onclick="playlistSelect(this.value)" value="2"></button></div>
+			<br>
+			<div id="img-3" class="list-img"><button class="song-select" onclick="playlistSelect(this.value)" value="3"></button></div>
+		</div>
+	</td>
+	</tr>
+	</table>
+	</div> <!-- end content -->
+</body>
+</html>
