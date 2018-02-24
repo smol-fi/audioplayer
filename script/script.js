@@ -7,16 +7,16 @@ var songName = document.getElementById('songname');
 var volbar = document.getElementById('volumeBar');
 var songs = [
 	{
-		artist: "Pää Kii",
-		title: "Nyt skipataan kahvit"
+		artist: "Artist 1",
+		title: "Title 1"
 	},
 	{
-		artist: "Lil Pump",
-		title: "Gucci Gang (cover by Big Marvel)"
+		artist: "Artist 2",
+		title: "Song 2"
 	},
 	{
-		artist: "cav.",
-		title: "July"},
+		artist: "Artist 3",
+		title: "Song 3"},
 ];
 
 songNr = 1;
